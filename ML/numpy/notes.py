@@ -115,3 +115,26 @@ mn = np.min(stats) # Minimum
 mx = np.max(stats) # Maximum
 sm = np.sum(stats) # Sum
 print(mn, mx, sm)
+
+
+# <==============================================================================================================>
+#                                  REORGANIZING ARRAYS
+# <==============================================================================================================>
+
+
+before = np.array([[1,2,3,4],[5,6,7,8]])
+after = before.reshape((8,1))
+print(before)
+print(after)
+
+# Vertically stacking vectors
+v1 = np.array([1,2,3,4])
+v2 = np.array([5,6,7,8])
+res = np.vstack([v1,v2])
+print(res)
+
+# HOrizontal stack
+h1 = np.zeros((2,3))
+h2 = np.ones((2,3))
+res = np.hstack([h1, h2])
+print(res)

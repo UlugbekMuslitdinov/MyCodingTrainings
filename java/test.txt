@@ -1,0 +1,16 @@
+2+2
+"your" + "name"
+$1
+"your " + " name"
+int x = 42;
+x*2
+x=x+7
+x
+double meters=1.83;
+double centimeters = meters * 100;
+centimeters == meters
+String myName="ulugbek";
+myName="Ulugbek"
+myName + ", BS"
+System.out.println(x)
+System.out.println("Hello, " + myName)

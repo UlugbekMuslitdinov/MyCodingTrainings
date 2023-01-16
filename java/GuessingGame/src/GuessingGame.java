@@ -22,9 +22,12 @@ public class GuessingGame extends JFrame {
 		} else if (guess > theNumber) {
 			message = guess + " is too high. Please try again";
 		} else {
-			message = guess + " is correct. You win!";
+			message = guess + " is correct. You win! Let's play again";
+			newGame();
 		}
 		lblOutput.setText(message);
+		txtGuess.requestFocus();
+		txtGuess.selectAll();
 	}
 	
 	public void newGame() {
@@ -43,11 +46,17 @@ public class GuessingGame extends JFrame {
 		getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Guess a number between 1 and 100");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 9));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_1.setBounds(71, 93, 193, 13);
 		getContentPane().add(lblNewLabel_1);
 		
 		txtGuess = new JTextField();
+		txtGuess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				checkGuess();
+			}
+		});
 		txtGuess.setBounds(274, 90, 60, 19);
 		getContentPane().add(txtGuess);
 		txtGuess.setColumns(10);

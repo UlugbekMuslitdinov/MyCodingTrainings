@@ -1,0 +1,21 @@
+* {
+    border: 1px solid red;
+}
+
+.calc-main {
+    width: 30%;
+    height: 450px;
+}
+
+.result-row {
+    height: 100px;
+}
+
+.numpad {
+    display: grid;
+    height: 350px;
+    gap: 15px;
+    grid-auto-columns: 31%;
+    grid-template-areas: " a a a";
+    width: 100%;
+}

@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 50,
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Pacifico'),
             ),
             Text(
-              'Flutter developer',
+              'FLUTTER DEVELOPER',
               style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.teal.shade100,
@@ -39,60 +40,43 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
-            Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+998 97 775 18 41',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans',
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                ),
+            SizedBox(
+              width: 150.0,
+              height: 20.0,
+              child: Divider(
+                color: Colors.teal.shade100,
               ),
             ),
             Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal),
+                  title: Text(
+                    '+998 97 775 18 41',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                )),
+            Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    'ulugbekmuslitdinov@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      'ulugbekmuslitdinov@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans',
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+                  ),
+                )),
           ],
         )),
       ),

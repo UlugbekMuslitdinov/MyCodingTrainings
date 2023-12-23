@@ -233,5 +233,5 @@ async function getTodos() {
   return data;
 }
 
-const todos = getTodos();
-console.log(todos);
+// const todos = getTodos();
+// console.log(todos);
